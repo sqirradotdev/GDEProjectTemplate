@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build (debug)",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -16,12 +16,11 @@
             "command": "scons",
             "args": [
                 "compiledb=yes",
-                "dev_build=yes"
             ],
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "clean",
+            "label": "clean (debug)",
             "group": "none",
             "type": "shell",
             "options": {
@@ -31,24 +30,8 @@
             "args": [
                 "--clean",
                 "compiledb=yes",
-                "dev_build=yes"
             ],
             "problemMatcher": [],
         },
-        {
-            "label": "make compile_commands.json",
-            "group": "none",
-            "type": "shell",
-            "options": {
-                "cwd": "${workspaceFolder}/native/"
-            },
-            "command": "scons",
-            "args": [
-                "compiledb=yes",
-                "dev_build=yes",
-                "compile_commands.json"
-            ],
-            "problemMatcher": [],
-        }
     ]
 }

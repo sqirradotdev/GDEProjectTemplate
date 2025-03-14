@@ -12,7 +12,7 @@ using namespace godot;
 
 void initialize_template_module(ModuleInitializationLevel p_level) {
   if (p_level == godot::MODULE_INITIALIZATION_LEVEL_SCENE) {
-    ClassDB::register_class<Swayer2D>();
+    GDREGISTER_RUNTIME_CLASS(Swayer2D);
   }
 }
 

@@ -3,8 +3,10 @@
 #include <godot_cpp/classes/node2d.hpp>
 #include <godot_cpp/classes/object.hpp>
 #include <godot_cpp/core/class_db.hpp>
+#include <godot_cpp/core/math.hpp>
 #include <godot_cpp/core/object.hpp>
 #include <godot_cpp/core/property_info.hpp>
+
 
 using namespace godot;
 
@@ -45,9 +47,9 @@ void Swayer2D::_process(double delta) {
     return;
   }
 
-  time_passed += delta;
+  time_passed += delta * frequency;
 
-  parent->set_rotation(amplitude * sin(time_passed * frequency));
+  parent->set_rotation(amplitude * sin(time_passed * Math_TAU));
 }
 
 void Swayer2D::set_amplitude(const double p_amplitude) {
