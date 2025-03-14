@@ -1,0 +1,59 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Scons
+# for projects that use SCons for building: http://http://www.scons.org/
+.sconsign.dblite
+
+# When configure fails, SCons outputs these
+config.log
+.sconf_temp
+
+# clangd specific
+.cache
+compile_commands.json
+
+# C/C++ generated
+*.a
+*.ax
+*.d
+*.dll
+*.lib
+*.lo
+*.o
+*.os
+*.ox
+*.Plo
+*.so
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+*.exp

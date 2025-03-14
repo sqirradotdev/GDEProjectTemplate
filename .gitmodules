@@ -1,0 +1,4 @@
+[submodule "native/godot-cpp"]
+	path = native/godot-cpp
+	url = git@github.com:godotengine/godot-cpp.git
+	branch = 4.4

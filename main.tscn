@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://nqvrx5hisxui"]
+
+[ext_resource type="Texture2D" uid="uid://esfv8v5umse2" path="res://icon.svg" id="1_ig7tw"]
+
+[node name="Main" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(125, 125)
+rotation = -0.235427
+texture = ExtResource("1_ig7tw")
+
+[node name="Swayer2D" type="Swayer2D" parent="Sprite2D"]
+amplitude = 0.25
+frequency = 5.0
