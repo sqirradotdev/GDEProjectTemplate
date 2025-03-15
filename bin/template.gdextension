@@ -5,5 +5,7 @@ compatibility_minimum = "4.4"
 
 [libraries]
 
-windows.debug.x86_64 = "res://bin/template.dll"
+windows.debug.x86_64 = "res://bin/template.d.dll"
 windows.release.x86_64 = "res://bin/template.dll"
+macos.debug = "res://bin/libtemplate.d.dylib"
+macos.release = "res://bin/libtemplate.dylib"

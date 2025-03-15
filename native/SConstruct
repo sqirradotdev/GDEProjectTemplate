@@ -2,28 +2,25 @@
 import os
 import sys
 
-LIBNAME = "template"
-OUTPATH = "../bin/"
+# Constants
+BASE_NAME = "template"
+OUT_PATH = "../bin/"
 
 env = SConscript("godot-cpp/SConstruct")
 
-# print(env.Dump())
-
-# For reference:
-# - CCFLAGS are compilation flags shared between C and C++
-# - CFLAGS are for C-specific compilation flags
-# - CXXFLAGS are for C++-specific compilation flags
-# - CPPFLAGS are for pre-processor flags
-# - CPPDEFINES are for pre-processor defines
-# - LINKFLAGS are for linking flags
-
-# tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["src/"])
 sources = Glob("src/*.cpp")
 
-library = env.SharedLibrary(
-    "{}{}{}{}".format(OUTPATH, env["SHLIBPREFIX"], LIBNAME, env["SHLIBSUFFIX"]),
-    source=sources,
-)
+if env["target"] == "template_debug" or env["target"] == "editor":
+    libname = "{}{}".format(BASE_NAME, ".d")
+else:
+    libname = BASE_NAME
+
+if env["platform"] == "macos":
+    target = "{}lib{}.dylib".format(OUT_PATH, libname)
+else:
+    target = "{}{}{}{}".format(OUT_PATH, env["SHLIBPREFIX"], libname, env["SHLIBSUFFIX"])
+
+library = env.SharedLibrary(target, source=sources)
 
 Default(library)

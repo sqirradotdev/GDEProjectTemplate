@@ -26,6 +26,7 @@ compile_commands.json
 *.ox
 *.Plo
 *.so
+*.dylib
 
 # Files built by Visual Studio
 *_i.c
