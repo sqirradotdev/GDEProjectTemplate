@@ -58,3 +58,6 @@ compile_commands.json
 *.svclog
 *.scc
 *.exp
+
+# VSCode
+.vscode/launch.json

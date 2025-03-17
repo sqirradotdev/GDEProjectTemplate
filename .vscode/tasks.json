@@ -16,6 +16,8 @@
             "command": "scons",
             "args": [
                 "compiledb=yes",
+                "target=template_debug",
+                "debug_symbols=yes",
             ],
             "problemMatcher": "$msCompile"
         },
@@ -30,6 +32,8 @@
             "args": [
                 "--clean",
                 "compiledb=yes",
+                "target=template_debug",
+                "debug_symbols=yes",
             ],
             "problemMatcher": [],
         },
