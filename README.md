@@ -1,4 +1,4 @@
-# GDExtension Project Template
+# GDExtension Project Template in VS Code
 
 This is a Godot Engine project template with GDExtension (C++) already setup to kickstart your project.
 
@@ -22,6 +22,10 @@ For more information, refer to [GDExtension C++ Example](https://docs.godotengin
     git clone --recurse-submodules https://github.com/sqirradotdev/GDEProjectTemplate.git 
     ```
 2. Navigate to the cloned repo and go to `.vscode` folder. Depending on your platform, duplicate (copy & paste) the template `launch` file and rename it to exactly `launch.json`. Ex: Windows users should duplicate `launch.windows.json`.
+3. Open the cloned repo folder in VS Code.
+4. Edit the recently renamed `launch.json` in `.vscode` folder and make a few edits:
+    - Change the example Godot executable path to your path.
+    - (Optional) To use the debugger on the Godot Editor, append `--editor` in the arguments list.
 
 ### Usage
 

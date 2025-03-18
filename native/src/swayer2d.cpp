@@ -7,7 +7,6 @@
 #include <godot_cpp/core/object.hpp>
 #include <godot_cpp/core/property_info.hpp>
 
-
 using namespace godot;
 
 Swayer2D::Swayer2D() {
