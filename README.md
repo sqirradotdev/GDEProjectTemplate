@@ -1,4 +1,26 @@
+Windows
+
+```json
+{
+    "name": "Launch Project",
+    "type": "cppvsdbg",
+    "request": "launch",
+    "program": "path\\to\\Godot.exe",
+    // To run the project instead of editing it, add the "--editor" argument.
+    "args": [
+        "--path",
+        "."
+    ],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "environment": [],
+    "console": "internalConsole",
+    "preLaunchTask": "build (debug)"
+}
+```
+
 Mac
+
 ```json
 {
     "name": "Run Project",
